@@ -1,0 +1,65 @@
+/*Resetando os estilos que os navegadores tem por padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+/*Alinhando os elementos no centro da pagina */
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin-bottom: 3rem;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 3rem;
+}
+
+.images{
+    width: 100px;
+    /* passando uma transição do tipo tranform que foi criada no hover, essa transição irá demorar 0.5 segundos para atingir a escala total*/
+    transition: transform .5s ease;
+}
+
+/* Ao passar o mouse em cima da imagem, ela aumentará sua escala*/
+.images:hover{
+    transform: scale(1.1);
+}
+
+h2{
+    margin-top: 3rem;
+}
+
+table{
+    background: rgb(186, 186, 186);
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 28rem;
+}
+
+th{
+    padding: 0.8rem;
+    background: gray;
+}
+
+td{
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+}
