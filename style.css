@@ -5,21 +5,19 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(235, 235, 235);
-}
 
 /*Alinhando os elementos no centro da pagina */
-.container{
+body{
+    background-color: rgb(235, 235, 235);
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: center;
     align-items: center;
 }
 
 h1{
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .list{
@@ -43,6 +41,7 @@ h1{
 
 h2{
     margin-top: 3rem;
+    text-align: center;
 }
 
 table{
@@ -63,6 +62,14 @@ td{
     padding-bottom: 0.5rem;
 }
 
+.read-only{
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+    outline: none;
+    background-color: rgb(186, 186, 186);
+}
+
 .form{
     display: flex;
     flex-direction: column;
@@ -72,6 +79,32 @@ td{
     margin-top: 2rem;
 }
 
-.form input{
+.form > input{
     width: 25rem;
+}
+
+.box-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.inputs-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputs-container > input{
+    width: 15rem;
+    border: none;
+    padding: 0.3rem;
+}
+
+.button{
+    padding: 0.3rem;
+    margin-bottom: 1rem;
 }

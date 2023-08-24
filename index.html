@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <div class="container">
+    <!--Troquei a tag <div> por <section>-->
+    <section class="container">
         <h1>Escolha um Supermercado</h1>
 
         <!--Lista com links dentro de imagens, "target= "_blank"" é para abrir uma nova aba ao clicar no link-->
@@ -52,16 +53,58 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </section>
     <article>
         <form action="https://www.w3schools.com/action_page.php?nome1=test" class="form">
-            <input type="text" maxlength="15" placeholder="Nome">
-            <input type="text" value="Apenas Leitura" readonly>
-            <input type="number" min="25000" max="30000" placeholder="Numero">
-            <input type="radio">
-            <input type="checkbox">
 
-            <button type="submit" >Submit</button>
+            <input class="read-only" type="text" value="Preencha os campos corretamente!!" readonly>           
+
+                <!-- separei em divs para melhor estilização e organização de codigo-->
+                <!-- Adicionei labels, para ficar mais semantico e para ajudar na acessibilidade-->
+                <div class="inputs-container">
+                    <label for="nome-produto">Nome do produto:</label>
+                    <input type="text" maxlength="15" placeholder="Nome" id="nome-produto">
+                </div>
+
+                <div class="inputs-container">
+                    <label for="preco-produto">Preço atual:</label>
+                    <input type="number"  min="0" max="30000" placeholder="Numero" id="preco-produto">
+                </div>
+
+                <h3>Mercado</h3>
+
+                <div class="box-container">
+                    <label for="option-pinheiro">Pinheiro</label>
+                    <input type="radio" name="option" id="option-pinheiro">
+                </div>
+
+                <div class="box-container">
+                    <label for="option-sao-geraldo">São Geraldo</label>
+                    <input type="radio" name="option" id="option-sao-geraldo">
+                </div>
+
+                <div class="box-container">
+                    <label for="option-carrefour">Carrefour</label>
+                    <input type="radio" name="option" id="option-carrefour">
+                </div>
+
+                <h3>Categoria</h3>
+
+                <div class="box-container">
+                    <label for="box-desconto">Desconto</label>
+                    <input type="checkbox" id="box-desconto">
+                </div>
+
+                <div class="box-container">
+                    <label for="box-novidade">Novidade</label>
+                    <input type="checkbox" id="box-novidade">
+                </div>
+
+                <div class="box-container">
+                    <label for="box-promocao">Promoção</label>
+                    <input type="checkbox" id="box-promocao">
+                </div>
+            <button type="submit" class="button">Cadastrar</button>
         </form>
     </article>
 
